@@ -245,6 +245,11 @@ footer{
 .invalid{
     border: 1px solid red;
 }
+.success-message{
+    color: green;
+    font-weight: 600;
+    margin-top: 15px;
+}
 @media (min-width: 768px){
     body, html{
         overflow-x: hidden;
@@ -333,7 +338,6 @@ footer{
     }
     .formAll{
         width: 450px;
-        height: 465px;
     }
     input, .submit{
         width: 400px;
