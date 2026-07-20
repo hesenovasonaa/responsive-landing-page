@@ -13,14 +13,22 @@ body{
 }
 nav{
     display: none;
+    width: 100%;
+    text-align: right;
+}
+nav.is-open{
+    display: block;
 }
 .icon{
     display: block;
+    border: none;
+    background-color: white;
 }
 .head{
     display: flex;
     justify-content: space-between;
-    margin: 0;
+    align-items: flex-start;
+    flex-wrap: wrap;
     padding: 10px 30px;
 }
 header{
@@ -31,12 +39,22 @@ header{
     background-color: rgba(255, 255, 255, 0.9);
     box-shadow:0 6px 10px rgba(0,0,0,.08);
 }
+header.is-open{
+    height: auto;
+}
 ul{
     list-style: none;
     display: flex;
-    gap:50px;
+    flex-direction: column;
+    gap:20px;
+    padding: 10px 0px;
     font-weight: 500;
     cursor: pointer;
+}
+li a {
+    text-decoration: none; 
+    color: inherit;     
+    cursor: pointer;    
 }
 .headText{
     color: blue;
@@ -54,7 +72,7 @@ section{
 .heroText{
     margin-top: 10px;
 }
-button{
+.first_btn,.submit{
     margin-top: 30px;
     width: 130px;
     height: 40px;
@@ -63,7 +81,8 @@ button{
     border: none;
     border-radius: 5px;
 }
-button:hover{
+.first_btn:hover, 
+.submit:hover{
     background-color: rgb(42, 81, 255);
     transition:.3s;
     cursor: pointer;
@@ -217,26 +236,50 @@ footer{
     font-size: 13px;
     padding: 10px;
 }
-
+.error-message{
+    color: red;
+    font-size: 12px;
+    display: block;
+    margin-top: 5px;
+}
+.invalid{
+    border: 1px solid red;
+}
 @media (min-width: 768px){
     body, html{
         overflow-x: hidden;
     }
     nav{
         display: block;
+        width: auto;
+        text-align: left;
     }
     .icon{
         display: none;
     }
+    ul{
+        list-style: none;
+        display: flex;
+        flex-direction: row;
+        gap:50px;
+        font-weight: 500;
+        cursor: pointer;
+    }
     .head{
+        display: flex;
         justify-content: space-around;
+        align-items: center;
+        flex-wrap: nowrap;
         margin: 20px;
         padding: 20px;
     }
     header{
+        height: 60px;
         position: sticky;
+        top: 0;
         width: auto;
     }
+
     .hero{
         padding: 180px 40px;
         margin-top: 0;

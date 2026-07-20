@@ -1,30 +1,32 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="az">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Landing Page</title>
-    <link rel="stylesheet" href="styles.css"> 
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <header>
         <div class="head">
             <h2 class="headText">NovaTech</h2>
-            <img src="./icon.svg" class="icon" alt="icon">
-            <nav>
+            <button class="icon" aria-label="Menyunu aç">
+                <img src="./icon.svg" alt="">
+            </button>
+            <nav aria-label="Əsas menyu">
                 <ul>
-                <li>Haqqımızda</li>
-                <li>Qalereya</li>
-                <li>Əlaqə</li>
+                <li><a href="#about">Haqqımızda</a></li>
+                <li><a href="#galery">Qalereya</a></li>
+                <li><a href="#contact">Əlaqə</a></li>
             </ul>
             </nav>
         </div>
     </header>
     <main>
-        <section class="hero">
+        <section id="about" class="hero">
             <h1>Rəqəmsal Dünyada Sizin Güvənli Tərəfdaşınız</h1>
             <p class="heroText">Biz biznesiniz üçün ən innovativ web və mobil həlləri sıfırdan hazırlayırıq.</p>
-            <button>Bizimlə Əlaqə</button>
+            <button class="first_btn">Bizimlə Əlaqə</button>
         </section>
         <section class="about">
             <h2>Haqqımızda</h2>
@@ -68,7 +70,7 @@
                 
             </div>
         </section>
-        <section class="galery">
+        <section id="galery" class="galery">
             <h2>Layihələrimiz (Qalereya)</h2>
             <div class="cardSecond">
                 <img class="img1" src="./img1.jpg" alt="Web sayt">
@@ -78,29 +80,28 @@
                 <img class="commerce" src="./commerce.jpg" alt="Web sayt">
             </div>
         </section>
-        <section class="contact">
+        <section id="contact" class="contact">
             <h2 class="contactText">Bizimlə Əlaqə</h2>
             <form class="formAll">
                 <label>
                     Ad və Soyad *
-                    <br><input type="text" required placeholder="Əli Məmmədov">
+                    <br><input type="text" id="name" required placeholder="Əli Məmmədov">
                 </label>
                 <label>
                     Elektron poçt *
-                    <br><input type="email" required placeholder="mammadov.ali.professional-developer@company-domain.az">
+                    <br><input type="email" id="email" required placeholder="mammadov.ali.professional-developer@company-domain.az">
                 </label>
                 <label>
                     Mesajınız *
-                    <br><textarea rows="7" required placeholder="Layihəniz barədə qısa məlumat..."></textarea>
+                    <br><textarea rows="7" id="message" required placeholder="Layihəniz barədə qısa məlumat..."></textarea>
                 </label>
                 <button type="submit" class="submit">Göndər</button>
-
             </form>
         </section>
         <footer>
-            
             <p class="lastText">© 2026 NovaTech. Bütün hüquqlar qorunur.</p>
         </footer>
     </main>
+    <script src="script.js"></script>
 </body>
 </html>
